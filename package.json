@@ -1,0 +1,11 @@
+{
+  "name": "mtag-license-system",
+  "version": "1.0.0",
+  "description": "MTAG Global Aviation System - fictional Roblox license portal",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=24.18.0"
+  }
+}

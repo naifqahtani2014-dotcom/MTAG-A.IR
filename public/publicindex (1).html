@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MTAG | لوحة الإدارة</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header class="nav"><div class="brand"><div class="brandmark">✈</div><div><b>MTAG</b><span>لوحة إدارة التراخيص</span></div></div><nav><a href="/">الرئيسية</a><button id="logout" class="linkbtn">تسجيل الخروج</button></nav></header>
+<main class="admin">
+<section id="loginBox" class="panel narrow"><div class="eyebrow">EMPLOYEE PORTAL</div><h1>دخول الموظفين</h1><p>الوصول إلى إدارة تراخيص MTAG.</p><form id="loginForm"><input id="user" placeholder="اسم المستخدم" required><input id="pass" type="password" placeholder="كلمة المرور" required><button class="btn primary">دخول</button></form><div id="loginErr" class="error"></div></section>
+<section id="dashboard" hidden>
+<div class="dashhead"><div><div class="eyebrow">MTAG ADMINISTRATION</div><h1>لوحة التراخيص</h1></div><a class="btn ghost" href="/">الموقع العام</a></div>
+<div class="stats" id="stats"></div>
+<div class="grid2"><section class="panel"><h2>إصدار ترخيص جديد</h2><form id="createForm" class="formgrid">
+<input name="holder" placeholder="اسم المالك" required><input name="company" placeholder="الشركة / المنظمة" required>
+<select name="licenseType"><option>رخصة طيار</option><option>ترخيص شركة طيران</option><option>ترخيص أكاديمية</option><option>ترخيص طائرة</option><option>ترخيص نقل جوي</option><option>ترخيص طيران عسكري</option><option>أخرى</option></select>
+<select name="category"><option>طيران مدني</option><option>طيران عسكري</option><option>نقل جوي</option><option>أكاديمية طيران</option><option>شركة طيران</option><option>طائرة</option></select>
+<input name="aircraft" placeholder="بيانات الطائرة (اختياري)"><input name="issueDate" type="date"><input name="expirationDate" type="date"><textarea name="notes" placeholder="ملاحظات"></textarea>
+<button class="btn primary full">إصدار الترخيص</button></form><div id="createResult"></div></section>
+<section class="panel"><h2>سجل التراخيص</h2><div class="toolbar"><input id="search" placeholder="بحث برقم أو اسم..."><button id="refresh" class="btn ghost">تحديث</button></div><div id="licenses"></div></section></div>
+<section class="panel"><h2>سجل العمليات</h2><div id="audit"></div></section>
+</section></main>
+<script src="/admin.js"></script></body></html>
